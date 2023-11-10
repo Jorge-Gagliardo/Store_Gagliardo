@@ -1,10 +1,11 @@
 import '../styles/ItemListContainer.css'
-import ItemCount from './components/ItemCount'
+import ItemCount from '../components/ItemCount'
+import ItemList from './ItemList.jsx'
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   return (
     <>
-      <h1 className='centrar'>{greeting}</h1>
+      <ItemList/>
       <ItemCount />
     </>
   )

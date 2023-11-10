@@ -8,7 +8,6 @@ function App() {
     <>
       <NavBar />
       <ItemListContainer greeting={"En construcción..."} />
-      
     </>
   )
 }
