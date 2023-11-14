@@ -1,8 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../styles/Item.css'
+import { Link } from 'react-router-dom'
 
-const Item = ({ titulo }) => {
+const Item = ({ titulo, id, desc, precio, categoria }) => {
   return (
     <div className='container-Item'>
       <Card style={{ width: '20rem' }}>
@@ -10,10 +11,11 @@ const Item = ({ titulo }) => {
       <Card.Body>
         <Card.Title>{titulo}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {desc}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Link to={`/item/${id}`}>
+          <Button variant="primary">Detalles</Button>
+        </Link>
       </Card.Body>
     </Card>
     </div>
