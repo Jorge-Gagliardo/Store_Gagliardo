@@ -12,18 +12,31 @@ const NavBar = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-        <Navbar.Brand>
-            <Link to={'/'}>
+          <Navbar.Brand>
+            <Link to={'/'} className='estilos-elementos-navbar'>
               STORE
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              //!Cambiar estos href
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              {/* Cambiar estos href */}
+              <div className='container-elementos-navbar'>
+              <div className='elemento-navbar'>
+                <Link className='estilos-elementos-navbar'>
+                  Home
+                </Link>
+              </div>
+
+              <div className='elemento-navbar'>
+                <Link className='estilos-elementos-navbar'>
+                  Link
+                </Link>
+              </div>
+              </div>
+              
+
+              <NavDropdown title="Categorías" id="basic-nav-dropdown">
 
                 <div className='items'>
                   <Link to="/categoria/categoria1" className='texto'>Categoría 1</Link>

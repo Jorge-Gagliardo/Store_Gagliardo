@@ -6,3 +6,18 @@
   text-decoration: none;
   color: black;
 }
+
+.container-elementos-navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.elemento-navbar{
+  margin: 6px;
+}
+
+.estilos-elementos-navbar{
+  text-decoration: none;
+  color: black;
+}
