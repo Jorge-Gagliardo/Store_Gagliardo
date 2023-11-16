@@ -1,4 +1,8 @@
 .container-Item {
   margin: 10px;
-  /* box-sizing: border-box; */
+  transition: transform 0.3s;
+}
+
+.container-Item:hover{
+  transform: scale(1.05)
 }

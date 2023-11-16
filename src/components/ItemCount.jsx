@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
-import Toast from 'react-bootstrap/Toast';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import '../styles/ItemCount.css'
+import ToastCustom from './ToastCustom';
 
 
 const ItemCount = () => {
@@ -14,25 +15,29 @@ const ItemCount = () => {
     setShow(true)
   }
 
+  const handleCloseToast = () => {
+    setShow(false);
+  };
+
   return (
-    <div className='centrar-itemCount'>
-      <Toast onClose={() => setShow(false)} show={show} delay={3000} autohide style={{ position: "fixed", top: 20, right: 20 }}>
-          <Toast.Header>
-            <img
-              src="holder.js/20x20?text=%20"
-              className="rounded me-2"
-              alt=""
-            />
-            <strong className="me-auto">Producto agregado</strong>
-            <small>justo ahora</small>
-          </Toast.Header>
-          <Toast.Body>{`Has agregado ${count} productos al carrito`}</Toast.Body>
-        </Toast>
-      <Button variant="primary" onClick={() => setCount(count + 1)}>+</Button>{' '}
-      <Badge bg="success">{count}</Badge>{' '}
-      <Button variant="danger" onClick={() => setCount(count - 1)}>-</Button>{' '}
-      <Button variant="dark" onClick={addToCart}>Agregar al carrito</Button>
-    </div>
+    <>
+      <ToastCustom
+        count = {count}
+        showCustom = {show}
+        onClose = {handleCloseToast}
+      />
+
+      <div className='centrar-itemCount'>
+        <ButtonGroup aria-label="Basic example">
+          <Button variant="secondary" onClick={() => setCount(count + 1)}>+</Button>
+          <Button variant="secondary" onClick={() => setCount(count - 1)}>-</Button>
+          <Button variant="secondary" onClick={addToCart}>
+            Agregar <Badge bg="info">{count}</Badge>
+          </Button>
+        </ButtonGroup>
+      </div>
+
+    </>
   )
 }
 

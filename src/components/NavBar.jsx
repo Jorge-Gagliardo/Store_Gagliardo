@@ -10,7 +10,7 @@ import '../styles/NavBar.css'
 const NavBar = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary estilos-navbar">
         <Container>
           <Navbar.Brand>
             <Link to={'/'} className='estilos-elementos-navbar'>
@@ -23,14 +23,14 @@ const NavBar = () => {
               {/* Cambiar estos href */}
               <div className='container-elementos-navbar'>
               <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar'>
+                <Link className='estilos-elementos-navbar' to={'/'}>
                   Home
                 </Link>
               </div>
 
               <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar'>
-                  Link
+                <Link className='estilos-elementos-navbar' to={'/contacto'}>
+                  Contacto
                 </Link>
               </div>
               </div>
@@ -65,47 +65,6 @@ const NavBar = () => {
         </Container>
       </Navbar>
 
-
-
-
-      {/* <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand>
-            <Link to={'/'}>
-              STORE
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
-              <NavDropdown title="Categoría" id="basic-nav-dropdown">
-                <NavDropdown.Item className='items'>
-                  <Link to="/categoria/categoria1" className='texto'>ITEM 1</Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Item className='items'>
-                  <Link to="/categoria/categoria2" className='texto'>ITEM 2</Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Item className='items'>
-                  <Link to="/categoria/categoria3" className='texto'>ITEM 3</Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item className='items'>
-                  <Link to="/" className='texto'>Home</Link>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-          <Link to={'/cart'}>
-            <CartWidget />
-          </Link>
-        </Container>
-      </Navbar> */}
     </>
   )
 }

@@ -21,3 +21,14 @@
   text-decoration: none;
   color: black;
 }
+
+.estilos-navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1500;
+}
+
+body {
+  margin-top: 80px;
+}
