@@ -5,9 +5,9 @@ import '../styles/CartWidget.css'
 const cartWidget = () => {
   return (
     <div className='carrito'>
-      <a href="" className='icono-carrito'>
+      <span href="" className='icono-carrito'>
         <i><FaCartShopping /></i>
-      </a>
+      </span>
       <span className="texto-carrito">3</span>
     </div>
   )
