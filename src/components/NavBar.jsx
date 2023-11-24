@@ -20,21 +20,21 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/* Cambiar estos href */}
-              <div className='container-elementos-navbar'>
-              <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar' to={'/'}>
-                  Home
-                </Link>
-              </div>
 
-              <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar' to={'/contacto'}>
-                  Contacto
-                </Link>
+              <div className='container-elementos-navbar'>
+
+                <div className='elemento-navbar'>
+                  <Link className='estilos-elementos-navbar' to={'/'}>
+                    Home
+                  </Link>
+                </div>
+
+                <div className='elemento-navbar'>
+                  <Link className='estilos-elementos-navbar' to={'/contacto'}>
+                    Contacto
+                  </Link>
+                </div>
               </div>
-              </div>
-              
 
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
 

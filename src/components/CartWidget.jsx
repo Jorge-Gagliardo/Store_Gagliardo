@@ -5,7 +5,7 @@ import '../styles/CartWidget.css'
 const cartWidget = () => {
   return (
     <div className='carrito'>
-      <span href="" className='icono-carrito'>
+      <span className='icono-carrito'>
         <i><FaCartShopping /></i>
       </span>
       <span className="texto-carrito">3</span>
