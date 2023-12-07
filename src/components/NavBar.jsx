@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 import CartWidget from './cartWidget'
 import '../styles/NavBar.css'
@@ -14,7 +15,14 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand>
             <Link to={'/'} className='estilos-elementos-navbar'>
-              STORE
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+            Level Up Games
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,15 +47,15 @@ const NavBar = () => {
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
 
                 <div className='items'>
-                  <Link to="/categoria/categoria1" className='texto'>Categoría 1</Link>
+                  <Link to="/categoria/consolas" className='texto'>Consolas</Link>
                 </div>
 
                 <div className='items'>
-                  <Link to="/categoria/categoria2" className='texto'>Categoría 2</Link>
+                  <Link to="/categoria/computadoras" className='texto'>Computadoras</Link>
                 </div>
 
                 <div className='items'>
-                  <Link to="/categoria/categoria3" className='texto'>Categoría 3</Link>
+                  <Link to="/categoria/accesorios" className='texto'>Accesorios</Link>
                 </div>
 
                 <NavDropdown.Divider />
