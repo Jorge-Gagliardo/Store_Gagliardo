@@ -7,7 +7,6 @@ import { CartContext } from '../context/CartContext';
 const cartWidget = () => {
 
   const { cart, setCart } = useContext(CartContext)
-  console.log('CART',cart)
 
   const cantidadCarrito = () => {
     return cart.reduce((acc, producto) => acc + producto.count, 0)

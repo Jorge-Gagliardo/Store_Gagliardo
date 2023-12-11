@@ -5,17 +5,18 @@ import { CartContext } from './context/CartContext'
 import ItemList from './components/ItemList'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-import Cart from './components/Cart'
+import Cart from './components/Checkout'
 
 function App() {
 
 
   const [cart, setCart] = useState([])
+  const [prods, setProds] = useState([])
 
   return (
     <>
       {/* Proveedor de context */}
-      <CartContext.Provider value={{ cart, setCart }}>
+      <CartContext.Provider value={{ cart, setCart, prods, setProds }}>
 
 
         <BrowserRouter>
