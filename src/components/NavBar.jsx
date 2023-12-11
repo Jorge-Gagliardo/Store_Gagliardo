@@ -3,8 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
-import CartWidget from './cartWidget'
+import CartWidget from './CartWidget'
 import '../styles/NavBar.css'
 
 const NavBar = () => {
@@ -14,47 +15,49 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand>
             <Link to={'/'} className='estilos-elementos-navbar'>
-              STORE
+              <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}
+              Level Up Games
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/* Cambiar estos href */}
-              <div className='container-elementos-navbar'>
-              <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar' to={'/'}>
-                  Home
-                </Link>
-              </div>
 
-              <div className='elemento-navbar'>
-                <Link className='estilos-elementos-navbar' to={'/contacto'}>
-                  Contacto
-                </Link>
+              <div className='container-elementos-navbar'>
+
+                {/* <div className='elemento-navbar'>
+                  <Link className='estilos-elementos-navbar' to={'/'}>
+                    Home
+                  </Link>
+                </div> */}
+
               </div>
-              </div>
-              
 
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
 
-                <div className='items'>
-                  <Link to="/categoria/categoria1" className='texto'>Categoría 1</Link>
-                </div>
+                <NavDropdown.Item className='items' as='div'>
+                  <Link to="/categoria/consolas" className='texto' >Consolas</Link>
+                </NavDropdown.Item>
 
-                <div className='items'>
-                  <Link to="/categoria/categoria2" className='texto'>Categoría 2</Link>
-                </div>
+                <NavDropdown.Item className='items' as='div'>
+                  <Link to="/categoria/computadoras" className='texto'>Computadoras</Link>
+                </NavDropdown.Item>
 
-                <div className='items'>
-                  <Link to="/categoria/categoria3" className='texto'>Categoría 3</Link>
-                </div>
+                <NavDropdown.Item className='items' as='div'>
+                  <Link to="/categoria/accesorios" className='texto'>Accesorios</Link>
+                </NavDropdown.Item>
 
                 <NavDropdown.Divider />
 
-                <div className='items'>
+                <NavDropdown.Item className='items' as='div'>
                   <Link to="/" className='texto'>Home</Link>
-                </div>
+                </NavDropdown.Item>
 
               </NavDropdown>
             </Nav>

@@ -4,11 +4,11 @@ import '../styles/Item.css'
 import { Link } from 'react-router-dom'
 import imagenRef from '../assets/imagenRef.png'
 
-const Item = ({ titulo, id, desc, precio, categoria }) => {
+const Item = ({ titulo, id, desc, precio, categoria, stock, imagen }) => {
   return (
     <div className='container-Item'>
       <Card style={{ width: '20rem' }}>
-      <Card.Img variant="top" src={imagenRef} />
+      <Card.Img variant="top" src={`../src/assets/${imagen}.jpg`} />
       <Card.Body>
         <Card.Title>{titulo}</Card.Title>
         <Card.Text>
