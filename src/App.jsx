@@ -1,22 +1,17 @@
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
-import { CartContext } from './context/CartContext'
-import ItemList from './components/ItemList'
+import { CartProvider } from './context/CartContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
-import Cart from './components/Checkout'
+import Cart from './components/Cart'
 
 function App() {
 
 
-  const [cart, setCart] = useState([])
-  const [prods, setProds] = useState([])
-
   return (
     <>
       {/* Proveedor de context */}
-      <CartContext.Provider value={{ cart, setCart, prods, setProds }}>
+      <CartProvider>
 
 
         <BrowserRouter>
@@ -26,13 +21,16 @@ function App() {
           {/* Rutas de la store */}
           <Routes>
             <Route exact path='/' element={<ItemListContainer />} />
-            <Route exact path='/categoria/:categoriaId' element={<ItemList />} />
+            <Route exact path='/categoria/:categoriaId' element={<ItemListContainer />} />
             <Route exact path='/item/:id' element={<ItemDetailContainer />} />
             <Route exact path='/cart' element={<Cart />} />
           </Routes>
 
         </BrowserRouter>
-      </CartContext.Provider>
+
+
+
+      </CartProvider>
     </>
   )
 }
