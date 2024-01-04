@@ -74,7 +74,7 @@ const Cart = () => {
                 <Row>
                   {/* Imagen a la izquierda */}
                   <Col md={3}>
-                    <Card.Img src={`../src/assets/${p.imagen}.jpg`} style={{ width: '100%', height: 'auto' }} />
+                    <Card.Img src={`${p.imagen}`} style={{ width: '100%', height: 'auto' }} />
                   </Col>
 
                   {/* Contenido a la derecha */}

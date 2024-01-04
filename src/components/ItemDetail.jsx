@@ -66,7 +66,7 @@ const ItemDetail = ({ producto }) => {
 
 
       <Card style={{ width: '20rem' }} className='centrar-item'>
-        <Card.Img variant="top" src={`../src/assets/${producto.imagen}.jpg`} />
+        <Card.Img variant="top" src={`${producto.imagen}`} />
         <Card.Body>
           <Card.Title>{producto.titulo}</Card.Title>
           <Card.Text>
